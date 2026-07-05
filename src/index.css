@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Quicksand", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+}
+
+/* Custom scrollbar matching the cream aesthetic */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FFFBF8;
+}
+::-webkit-scrollbar-thumb {
+  background: #FFDEC9;
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FFB085;
+}
+
+/* ---------- Animated background keyframes ---------- */
+@keyframes kapi-sway {
+  0%, 100% { transform: rotate(-2.5deg); }
+  50% { transform: rotate(2.5deg); }
+}
+@keyframes kapi-sway-slow {
+  0%, 100% { transform: rotate(2deg); }
+  50% { transform: rotate(-2deg); }
+}
+@keyframes kapi-leaf-flutter {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(7deg) scale(1.05); }
+}
+@keyframes kapi-sun-breathe {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.06); opacity: 0.92; }
+}
+@keyframes kapi-sun-rays {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes kapi-sparkle-drift {
+  0% { transform: translateY(0); opacity: 0; }
+  20% { opacity: 0.9; }
+  80% { opacity: 0.5; }
+  100% { transform: translateY(-90px); opacity: 0; }
+}
+@keyframes kapi-leaf-float {
+  0% { transform: translate(-60px, 200px) rotate(0deg); opacity: 0; }
+  10% { opacity: 0.85; }
+  90% { opacity: 0.6; }
+  100% { transform: translate(1500px, 480px) rotate(320deg); opacity: 0; }
+}
+
+.kapi-sway { animation: kapi-sway 6s ease-in-out infinite; }
+.kapi-sway-slow { animation: kapi-sway-slow 8s ease-in-out infinite; }
+.kapi-leaf-flutter { transform-box: fill-box; transform-origin: 0% 50%; animation: kapi-leaf-flutter 4s ease-in-out infinite; }
+.kapi-sun-breathe { animation: kapi-sun-breathe 7s ease-in-out infinite; }
+.kapi-sun-rays { animation: kapi-sun-rays 90s linear infinite; }
+.kapi-sparkle-drift { animation: kapi-sparkle-drift 7s ease-in-out infinite; }
+.kapi-leaf-float { animation: kapi-leaf-float 18s linear infinite; }
+
+@keyframes kapi-twinkle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+.kapi-twinkle { animation: kapi-twinkle 2.6s ease-in-out infinite; }
+
+@keyframes kapi-cloud-drift {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(46px); }
+  100% { transform: translateX(0); }
+}
+.kapi-cloud-drift { animation: kapi-cloud-drift 26s ease-in-out infinite; }
+
+@keyframes kapi-sunbeam {
+  0%, 100% { opacity: 0.18; }
+  50% { opacity: 0.3; }
+}
+.kapi-sunbeam { animation: kapi-sunbeam 9s ease-in-out infinite; }
+
+/* ---- Living creatures & plants ---- */
+@keyframes kapi-breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.035); }
+}
+.kapi-breathe { transform-box: fill-box; transform-origin: 50% 100%; animation: kapi-breathe 3.4s ease-in-out infinite; }
+
+@keyframes kapi-tail {
+  0%, 100% { transform: rotate(-8deg); }
+  50% { transform: rotate(16deg); }
+}
+.kapi-tail { transform-box: fill-box; transform-origin: 10% 85%; animation: kapi-tail 2.8s ease-in-out infinite; }
+
+@keyframes kapi-tail-nub {
+  0%, 100% { transform: rotate(-14deg); }
+  50% { transform: rotate(14deg); }
+}
+.kapi-tail-nub { transform-box: fill-box; transform-origin: 20% 90%; animation: kapi-tail-nub 0.7s ease-in-out infinite; }
+
+@keyframes kapi-blink {
+  0%, 90%, 100% { transform: scaleY(1); }
+  94% { transform: scaleY(0.12); }
+}
+.kapi-blink { transform-box: fill-box; transform-origin: 50% 50%; animation: kapi-blink 5.2s linear infinite; }
+
+@keyframes kapi-ear {
+  0%, 86%, 100% { transform: rotate(0deg); }
+  90% { transform: rotate(-10deg); }
+  95% { transform: rotate(5deg); }
+}
+.kapi-ear { transform-box: fill-box; transform-origin: 50% 100%; animation: kapi-ear 6s linear infinite; }
+
+@keyframes kapi-plant-sway {
+  0%, 100% { transform: rotate(-2.2deg); }
+  50% { transform: rotate(2.6deg); }
+}
+.kapi-plant-sway { transform-box: fill-box; transform-origin: 50% 100%; animation: kapi-plant-sway 5.5s ease-in-out infinite; }
+
+/* ---- Cinematic background motion ---- */
+@keyframes kapi-kenburns {
+  0%   { transform: scale(1.01) translate(0%, 0%); }
+  30%  { transform: scale(1.045) translate(-1%, -0.6%); }
+  60%  { transform: scale(1.03) translate(0.9%, -0.9%); }
+  100% { transform: scale(1.01) translate(0%, 0%); }
+}
+.kapi-kenburns { animation: kapi-kenburns 48s ease-in-out infinite; will-change: transform; }
+
+@keyframes kapi-lampglow {
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 1; }
+}
+.kapi-lampglow { animation: kapi-lampglow 6.5s ease-in-out infinite; }
+
+@keyframes kapi-buddy-breathe {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-5px) scale(1.02); }
+}
+.kapi-buddy-breathe { animation: kapi-buddy-breathe 3.6s ease-in-out infinite; transform-origin: 50% 100%; }
+
+@keyframes kapi-heart-float {
+  0%, 100% { transform: translateY(0); opacity: 0.7; }
+  50% { transform: translateY(-10px); opacity: 1; }
+}
+.kapi-heart-float { animation: kapi-heart-float 4.5s ease-in-out infinite; }
+
+@keyframes kapi-head-tilt {
+  0%, 82%, 100% { transform: rotate(0deg); }
+  88% { transform: rotate(-4deg); }
+  94% { transform: rotate(2deg); }
+}
+.kapi-head-tilt { transform-box: fill-box; transform-origin: 50% 90%; animation: kapi-head-tilt 11s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .kapi-sway, .kapi-sway-slow, .kapi-leaf-flutter, .kapi-sun-breathe,
+  .kapi-sun-rays, .kapi-sparkle-drift, .kapi-leaf-float {
+    animation: none;
+  }
+}
+

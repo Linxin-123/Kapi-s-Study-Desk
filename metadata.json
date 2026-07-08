@@ -1,6 +1,0 @@
-{
-  "name": "Kapi Companion",
-  "description": "An adorable Capybara study companion named Kapi, powered by Teachable Machine vision models to guide your Pomodoro focus, detect distractions, and generate warm study habit reports.",
-  "requestFramePermissions": ["camera"],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
